@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Electricity Bill Calculator</title>
+</head>
+<body>
+	<h1>Electricity Bill Calculator</h1>
+	<form>
+		<label for="units">Enter no. of units:</label>
+		<input type="text" id="units" name="units">
+		<button type="button" onclick="calculate()">Calculate</button>
+	</form>
+	<p id="result"></p>
+
+	<script>
+		function calculate() {
+			var unit = document.getElementById("units").value;
+			var amt;
+
+			if(unit<=100) {
+				amt=unit*2.90;
+			}
+			else if(unit<=200) {
+				amt=100*2.90+(unit-100)*4.20;
+			}
+			else if(unit<=300) {
+				amt=100*2.90+100*4.20+(unit-200)*6.30;
+			}
+			else if(unit>300) {
+				amt=100*2.90+100*4.20+100*6.30+(unit-300)*6.40;
+			}
+
+			document.getElementById("result").innerHTML = "Amt is " + amt;
+		}
+	</script>
+</body>
+</html>
