@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Electricity Bill Calculator</title>
+	<link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 	<h1>Electricity Bill Calculator</h1>
 	<form>
 		<label for="units">Enter no. of units:</label>
-		<input type="number" id="units" name="units">
+		<input type="text" id="units" name="units">
 		<button type="button" onclick="calculate()">Calculate</button>
 	</form>
 	<p id="result"></p>
